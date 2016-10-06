@@ -37,13 +37,13 @@ void draw() {
 
 void keyPressed(KeyEvent e) {
   if (e.getKeyCode() == 10) {
-    saveFrame("/home/johan/bild.png");
+    saveFrame("/home/johan/bild.png"); // Change this to wherever you want to save your picture
   } else if (key == 'c') {
-    mode = 0; // Cirkel
+    mode = 0; // Circle
   } else if (key == 'f') {
-    mode = 1; // Fyrkant
+    mode = 1; // Square ('f' is for Swedish's 'fyrkant')
   } else if (key == 'l') {
-    mode = 2; // Linje
+    mode = 2; // Line
   } else {
     background(255, 0, 0);
   }
@@ -51,11 +51,11 @@ void keyPressed(KeyEvent e) {
 
 void mouseClicked() {
   if (mode == 0) {
-    drawCircle(); // Cirkel
+    drawCircle(); // Circle
   } else if (mode == 1) {
-    drawSquare(); // Fyrkant
+    drawSquare(); // Square
   } else if (mode == 2) {
-    drawLine(); // Linje
+    drawLine(); // Line
   }
 }
 
